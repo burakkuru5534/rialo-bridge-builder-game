@@ -80,6 +80,35 @@
     .leaderboard-list li:first-child{background: var(--good); color: var(--bg); font-weight: bold;}
     .leaderboard-list li:nth-child(2){background: #9ca3af; color: var(--bg);}
     .leaderboard-list li:nth-child(3){background: #78350f; color: #fff;}
+
+    /* -------------------------------------- */
+    /* 3. YARATICI LİNKİ (FOOTER) */
+    /* -------------------------------------- */
+    .creator-link{
+        text-align: right;
+        font-size: 11px;
+        margin-top: 15px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255,255,255,0.03); /* Hafif bir çizgi ekler */
+        color: var(--muted);
+    }
+    /* Sadece start ve leaderboard ekranlarında altbilginin düzgün görünmesi için hizalamayı düzeltiriz. */
+    #startScreen .creator-link, #leaderboardBox .creator-link {
+        text-align: center; 
+        border-top: 1px solid rgba(255,255,255,0.1); 
+        margin-top: 30px; 
+    }
+    
+    .creator-link a{
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s;
+    }
+    .creator-link a:hover{
+        color: #fff;
+        text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -98,6 +127,9 @@
         <input type="text" id="userNameInput" placeholder="Enter your name" maxlength="20">
         <button class="btn btn-primary" id="startBtn">Start Game</button>
         <button class="btn" id="viewLeaderboardBtn">View Global Leaderboard</button>
+        <div class="creator-link">
+            Game Creator: <a href="https://x.com/burakkuru5534" target="_blank">@burakkuru5534</a>
+        </div>
     </div>
 
     <div class="screen" id="leaderboardBox">
@@ -105,6 +137,9 @@
         <p class="small" id="leaderboardStatus">Loading scores from server...</p>
         <ul id="leaderboardList" class="leaderboard-list"></ul>
         <button class="btn" id="backToStartBtn">Back to Start</button>
+        <div class="creator-link">
+            Game Creator: <a href="https://x.com/burakkuru5534" target="_blank">@burakkuru5534</a>
+        </div>
     </div>
 
     <div class="board-container" id="gameScreen">
@@ -138,6 +173,10 @@
                 <button class="btn" id="resetBtn">Restart Game</button>
             </div>
         </div>
+        
+        <div class="creator-link">
+            Game Creator: <a href="https://x.com/burakkuru5534" target="_blank">@burakkuru5534</a>
+        </div>
 
         <div class="card" id="questionCard">
             <p class="q" id="questionText">Loading question...</p>
@@ -150,6 +189,9 @@
         <p class="small">You successfully built the entire bridge and earned the **RialOG** status! Your Final Score is: <strong id="finalWinScore">0</strong></p>
         <div style="margin-top:12px"><button class="btn btn-primary" id="playAgainWin">Play again</button></div>
         <div style="margin-top:12px"><button class="btn" id="leaderboardBtnWin">View Global Leaderboard</button></div>
+        <div class="creator-link">
+            Game Creator: <a href="https://x.com/burakkuru5534" target="_blank">@burakkuru5534</a>
+        </div>
     </div>
 
     <div class="screen lose" id="loseBox">
@@ -157,6 +199,9 @@
         <p class="small">You ran out of attempts and couldn't complete the path. Your Final Score is: <strong id="finalLoseScore">0</strong></p>
         <div style="margin-top:12px"><button class="btn btn-primary" id="playAgainLose">Try again</button></div>
         <div style="margin-top:12px"><button class="btn" id="leaderboardBtnLose">View Global Leaderboard</button></div>
+        <div class="creator-link">
+            Game Creator: <a href="https://x.com/burakkuru5534" target="_blank">@burakkuru5534</a>
+        </div>
     </div>
   </div>
 
